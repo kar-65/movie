@@ -1,0 +1,6 @@
+body{
+    background:#0000;
+}
+.card-columns{
+    display: flex;
+}

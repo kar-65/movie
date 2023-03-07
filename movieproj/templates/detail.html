@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+<h1 align="center">Movie Details..</h1>
+<div class="container">
+    <div class="row">
+        <div class="media">
+  <img class="mr-3" src="{{ movie.post.url}}" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">{{movie.name}}</h5>
+    {{movie.desc}}<br>
+      year-->{{movie.year}}<br><br>
+      <a  class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}">update</a>
+<a  class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">delete</a>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+{% endblock %}
+</body>
+</html>
